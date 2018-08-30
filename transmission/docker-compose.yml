@@ -1,0 +1,14 @@
+version: '3'
+services:
+  transmission:
+    image: linuxserver/transmission
+    ports:
+      - 9091:9091
+      - 51413:51413/udp
+    environment:
+      PGID: 1000
+      PUID: 1000
+    volumes:
+      - /home/lrgn/transmission/config:/config
+      - /home/lrgn/transmission/downloads:/downloads
+      - /home/lrgn/transmission/watch:/watch
