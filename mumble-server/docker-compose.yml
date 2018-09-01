@@ -1,0 +1,10 @@
+version: '3'
+services:
+  mumble-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "64738:64738"
+    volumes:
+      - ./config:/config
